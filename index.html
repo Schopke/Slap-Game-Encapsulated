@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0 shrink-to-fit=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Slap Game</title>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:600" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/game.css">
+</head>
+
+<body>
+  <!-- Title Header -->
+  <header class="container">
+    <div class="row">
+      <div class="col-12 text-center">
+        <h1>SLAP GAME</h1>
+      </div>
+    </div>
+  </header>
+  <main class="container marginBottom">
+    <div class="row">
+      <!-- gif col -->
+      <div class="col-12 col-sm-12 col-md-6 text-center">
+        <img src="assets/tenor.gif" class="target-gif text-center" alt="Head elploding gif">
+      </div>
+      <!-- dashboard -->
+      <div class="col-12 col-sm-12 col-md-6 text-center">
+        <span class="span-text">Player Name: <span id="playerName"></span></span><br />
+        <span class="span-text">Health: <span id="health">--</span></span><br />
+        <span class="span-text">Hits: <span id="hits"></span></span>
+        <br />
+
+        <button class="btn btn-warning" id="slap" onclick="app.controllers.gameController.slap()">SLAP</button>
+        <button class="btn btn-warning" id="punch" onclick="app.controllers.gameController.punch()">PUNCH</button>
+        <button class="btn btn-warning" id="kick" onclick="app.controllers.gameController.kick()">KICK</button>
+        <br />
+
+        <button class="btn btn-warning" id="vitamins"
+          onclick="app.controllers.gameController.giveVitamins()">VITAMINS</button>
+        <button class="btn btn-warning" id="shield"
+          onclick="app.controllers.gameController.engageShield()">SHIELD</button>
+        <button class="btn btn-warning" id="potion"
+          onclick="app.controllers.gameController.givePotion()">POTIONS</button>
+        <br />
+
+        <button class="btn btn-danger" id="reset" onclick="app.controllers.gameController.reset()">RESET</button>
+      </div>
+    </div>
+  </main>
+
+  <script src="app/main.js" type="module"></script>
+</body>
+
+</html>
